@@ -1,0 +1,19 @@
+/* Css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font style */
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+strong, b {
+    font-weight: 700;
+}
