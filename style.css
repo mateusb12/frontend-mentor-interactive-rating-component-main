@@ -31,7 +31,7 @@ strong, b {
 
 /* Component style */
 
-.card-container {
+.card-frame {
     border: 1px lime solid;
     display: flex;
     flex-direction: column;
@@ -101,8 +101,10 @@ strong, b {
     cursor: pointer;
 }
 
-.score-button:active{
+.score-button.active {
     background-color: deepskyblue;
+    color: var(--very-dark-blue);
+    border: 1px solid blue;
 }
 
 .submit-button{
@@ -115,6 +117,25 @@ strong, b {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    border: 1px white solid;
+}
+
+.thank-you-frame {
+    border: 1px red solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--very-dark-blue);
+    padding: 1.5rem;
+}
+
+.thank-you-frame.active{
+    display: block;
 }
 
 .thank-you-frame span{
@@ -129,6 +150,8 @@ strong, b {
     color: white;
 }
 
-.thank-you-frame h1{
+.thank-you-frame p{
     color: var(--light-grey);
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
 }
