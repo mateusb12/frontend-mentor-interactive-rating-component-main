@@ -83,7 +83,7 @@ strong, b {
     margin-bottom: 1rem;
 }
 
-.score-balloon{
+.score-button{
     background-color: var(--dark-blue);
     color: var(--light-grey);
     width: 50px;
@@ -93,6 +93,16 @@ strong, b {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    border: none;
+}
+
+.score-button:hover {
+    background-color: navy;
+    cursor: pointer;
+}
+
+.score-button:active{
+    background-color: deepskyblue;
 }
 
 .submit-button{
@@ -105,4 +115,20 @@ strong, b {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.thank-you-frame span{
+    display: inline-block;
+    color: var(--orange);
+    background-color: var(--dark-blue);
+    padding: 0.6rem 0.9rem;
+    border-radius: 1rem;
+}
+
+.thank-you-frame h1{
+    color: white;
+}
+
+.thank-you-frame h1{
+    color: var(--light-grey);
 }

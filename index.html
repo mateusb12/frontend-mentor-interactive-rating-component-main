@@ -37,12 +37,12 @@
         <p>Please let us know how we did with your support request. All feedback is appreciated
             to help us improve our offering!</p>
 
-        <div class="score-pool">
-            <span class="score-balloon">1</span>
-            <span class="score-balloon">2</span>
-            <span class="score-balloon">3</span>
-            <span class="score-balloon">4</span>
-            <span class="score-balloon">5</span>
+        <div class="score-pool" id="scorePool">
+            <button class="score-button" data-score="1">1</button>
+            <button class="score-button" data-score="2">2</button>
+            <button class="score-button" data-score="3">3</button>
+            <button class="score-button" data-score="4">4</button>
+            <button class="score-button" data-score="5">5</button>
         </div>
 
         <button class="submit-button">Submit</button>
@@ -55,15 +55,15 @@
 
 <!-- Thank you state start -->
 
-<div class="thank-you-label">
+<div class="thank-you-frame">
     <img src="./images/illustration-thank-you.svg" alt="thank you">
-    <p>You selected <!-- Add rating here --> out of 5</p>
+    <br>
+    <span>You selected <!-- Add rating here --> out of 5</span>
+    <h1>Thank you!</h1>
+
+    <p>We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
 </div>
-
-<h1>Thank you!</h1>
-
-<p>We appreciate you taking the time to give a rating. If you ever need more support,
-don’t hesitate to get in touch!</p>
 
 <!-- Thank you state end -->
 
@@ -73,4 +73,26 @@ don’t hesitate to get in touch!</p>
     Coded by <a href="#">Your Name Here</a>.
 </div>
 </body>
+<script>
+    let scorePool = document.getElementById('scorePool');
+    scorePool.addEventListener('click', function(event) {
+        if (event.target.classList.contains('score-button')) {
+            const score = parseInt(event.target.getAttribute('data-score'), 10);
+            changeCurrentScore(score);
+        }
+    });
+
+    function getButtonElementByScore(score) {
+        return document.querySelector(`.score-button[data-score="${score}"]`);
+    }
+
+    function changeCurrentScore(score) {
+        const buttonElement = getButtonElementByScore(score);
+        if (buttonElement) {
+            buttonElement.classList.add('current-score');
+            buttonElement.toggle('active');
+            console.log("You selected " + score + " out of 5");
+        }
+    }
+</script>
 </html>
