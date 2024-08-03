@@ -48,10 +48,15 @@ strong, b {
     width: 400px;
     /*height: 400px;*/
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: .5rem;
     /*position: relative;*/
     /*left: 25%;*/
     /*top: 25%;*/
+}
+
+.rating-content{
+    /*display: none;*/
+    border: 1px solid crimson;
 }
 
 .star-button{
@@ -62,11 +67,10 @@ strong, b {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
     margin-bottom: 2.2rem;
-}
-
-.rating-card h1{
-    margin-bottom: 1rem;
+    border: 1px solid rebeccapurple;
 }
 
 .rating-card p{
@@ -81,6 +85,7 @@ strong, b {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+    border: 1px lightsalmon solid;
 }
 
 .score-button{
@@ -126,14 +131,29 @@ strong, b {
 }
 
 .thanks {
-    border: 1px red solid;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: var(--very-dark-blue);
     padding: 1.5rem;
+    border: 1px red solid;
+}
+
+.thanks img {
+    border: 1px yellow solid;
+}
+
+.thanks h1 {
+    border: 1px green solid;
+}
+
+.thanks p {
+    border: 1px blue solid;
+    text-align: center;
+    color: var(--light-grey);
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .thanks.active{
@@ -146,14 +166,9 @@ strong, b {
     background-color: var(--dark-blue);
     padding: 0.6rem 0.9rem;
     border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
 .thanks h1{
     color: white;
-}
-
-.thanks p{
-    color: var(--light-grey);
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
 }
