@@ -32,7 +32,6 @@ strong, b {
 /* Component style */
 
 .card-frame {
-    border: 1px lime solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +39,7 @@ strong, b {
     gap: 2rem;
     background-color: #141519;
     height: 100vh;
+    /*border: 1px lime solid;*/
 }
 
 .rating-card {
@@ -55,11 +55,11 @@ strong, b {
 }
 
 .rating-content{
-    /*display: none;*/
-    border: 1px solid crimson;
+    display: block;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 1.5rem;
+    /*border: 1px solid crimson;*/
 }
 
 .rating-content h1{
@@ -70,7 +70,7 @@ strong, b {
     color: var(--light-grey);
     line-height: 1.5rem;
     margin-bottom: 1.5rem;
-    border: 1px solid aqua;
+    /*border: 1px solid aqua;*/
 }
 
 .star-button{
@@ -82,7 +82,7 @@ strong, b {
     justify-content: center;
     align-items: center;
     margin-bottom: 2.2rem;
-    border: 1px solid rebeccapurple;
+    /*border: 1px solid rebeccapurple;*/
 }
 
 .score-pool{
@@ -91,7 +91,7 @@ strong, b {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
-    border: 1px lightsalmon solid;
+    /*border: 1px lightsalmon solid;*/
 }
 
 .score-button{
@@ -138,25 +138,25 @@ strong, b {
 }
 
 .thanks {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-    border: 1px red solid;
+    /*border: 1px red solid;*/
 }
 
 .thanks img {
-    border: 1px yellow solid;
+    /*border: 1px yellow solid;*/
 }
 
 .thanks h1 {
-    border: 1px green solid;
+    /*border: 1px green solid;*/
 }
 
 .thanks p {
-    border: 1px blue solid;
+    /*border: 1px blue solid;*/
     text-align: center;
     color: var(--light-grey);
     line-height: 1.5rem;
@@ -173,7 +173,7 @@ strong, b {
     background-color: var(--dark-blue);
     padding: 0.6rem 0.9rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
 }
 
 .thanks h1{

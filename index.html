@@ -114,23 +114,19 @@
     });
 
     function swapElements() {
-        const ratingCard = document.querySelector('.rating-card');
-        const ratingContent = document.querySelector('.rating-content');
-        const thankYouFrame = document.querySelector('.thanks');
         const selectedScore = document.getElementById('selected-score');
         const activeButton = document.querySelector('.score-button.active');
-
-        // Update the text to show the selected score, if a score is selected
         if (activeButton) {
             selectedScore.textContent = `You selected ${activeButton.getAttribute('data-score')} out of 5`;
         }
+        const ratingContent = document.querySelector('.rating-content');
+        const thankYouFrame = document.querySelector('.thanks');
 
         // Check if the rating content is currently shown
         if (ratingContent.style.display !== 'none') {
             // Hide the rating content and show the thank you frame inside the rating card
             ratingContent.style.display = 'none';
-            thankYouFrame.style.display = 'block'; // Make sure to adjust the CSS to fit this into the card
-            ratingCard.appendChild(thankYouFrame); // Move the thank you frame into the rating card if not already there
+            thankYouFrame.style.display = 'flex'; // Make sure to adjust the CSS to fit this into the card
         } else {
             // Swap back if needed, for any reason
             ratingContent.style.display = 'block';
