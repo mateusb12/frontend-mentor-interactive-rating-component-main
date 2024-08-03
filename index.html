@@ -124,9 +124,8 @@
 
         // Check if the rating content is currently shown
         if (ratingContent.style.display !== 'none') {
-            // Hide the rating content and show the thank you frame inside the rating card
             ratingContent.style.display = 'none';
-            thankYouFrame.style.display = 'flex'; // Make sure to adjust the CSS to fit this into the card
+            thankYouFrame.style.display = 'flex';
         } else {
             // Swap back if needed, for any reason
             ratingContent.style.display = 'block';
